@@ -8,6 +8,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+
   def new
     @user = User.new
   end
@@ -15,6 +16,16 @@ class UsersController < ApplicationController
   def create
     User.create(user_params)
   end
+
+  def edit
+    @user = User.find(params[:id])
+  end
+
+  def updatif 
+    user = User.find(params[:id])
+    user.update(user_params)
+  end
+    
 
   private
 
