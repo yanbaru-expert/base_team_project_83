@@ -21,9 +21,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def updatif 
+  def update 
     user = User.find(params[:id])
     user.update(user_params)
+  end
+
+  def destroy
+    user = User.find(params[:id])
+    user.destroy
   end
     
 
